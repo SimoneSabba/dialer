@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'ui-dialer',
@@ -15,9 +16,7 @@ export class UiDialerComponent implements OnInit {
 	
   constructor() { }
 
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
 
   onClickNumber(number: string) {
     this.number_to_dial += number;
