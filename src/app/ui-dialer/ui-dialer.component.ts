@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'ui-dialer',
@@ -15,6 +16,7 @@ export class UiDialerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
 
   onClickNumber(number: string) {
