@@ -1,0 +1,18 @@
+<div class="[ dialer ]" [class.dialer--flex]=is_on_call>
+	<div class="[ dialer__top ]">
+		<span [hidden]=!is_on_call>00:22:23</span>
+		<span>{{ number_to_dial }}</span>
+	</div>
+	<div class="[ dialer__pad ]" [hidden]=is_on_call>
+		<div 
+			*ngFor="let number of numbers" 
+			class="[ dialer__pad__number ]"
+			(click)="onClickNumber(number)">
+			<span>{{ number }}</span>
+		</div>
+	</div>
+	<div class="[ dialer__bottom ]" [class.dialer__bottom--full-height]=is_on_call>
+		<button [hidden]=is_on_call (click)="onDialClick()" class="[ dialer__bottom__button dialer__bottom__button--green ]">Dial</button>
+		<button [hidden]=!is_on_call (click)="onHangUpClick()" class="[ dialer__bottom__button dialer__bottom__button--red ]">Hangup</button>
+	</div>
+</div>

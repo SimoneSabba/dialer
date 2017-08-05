@@ -1,0 +1,65 @@
+@import "../../assets/variables";
+@import "~bootstrap/scss/mixins";
+
+.dialer {
+
+	height: 100vh;
+	
+	&--flex {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	&__top {
+		background: $ui-red;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		padding: 40px;
+		color: $ui-white;
+	}
+
+	&__pad {
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-around;
+	    flex-wrap: wrap;
+
+	    &__number {
+				width: 33.3333%;
+				border-bottom: 1px solid $ui-white;
+    		border-left: 1px solid $ui-white;
+				cursor: pointer;
+  	    text-align: center;
+				padding: 30px;
+				background: grey;
+				&:active {
+					background: yellow;
+				}
+	    }
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		background: aqua;
+		padding: 20px;
+
+		&--full-height {
+			height: 100%;
+		}
+
+    &__button {
+			height: 35px;
+			width: 122px;
+			
+    	border: none;
+    	border-radius: 3px;
+			color: $ui-white;
+			
+			&--red { background: $ui-red; }
+			&--green { background: $ui-green; }
+    }
+	}
+}
