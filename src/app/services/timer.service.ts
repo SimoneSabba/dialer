@@ -15,7 +15,7 @@ export class TimerService {
     return this.getHours(ticks) + divider + this.getMinutes(ticks) + divider + this.getSeconds(ticks);
   }
 
-  private getSeconds(ticks: number) {
+  protected getSeconds(ticks: number) {
     return this.pad(ticks % 60);
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable, Subscription } from "rxjs/Rx";
-import { NumbersStoreService } from '../numbers-store.service';
+import { NumbersStoreService } from '../services/numbers-store.service';
 import { TimerService } from '../services/timer.service';
 
 import { IPhoneNumber } from '../interfaces/phone-number.interface';

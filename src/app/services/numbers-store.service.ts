@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 
-import { IPhoneNumber } from './interfaces/phone-number.interface';
+import { IPhoneNumber } from '../interfaces/phone-number.interface';
 
 @Injectable()
 export class NumbersStoreService {
@@ -27,6 +27,10 @@ export class NumbersStoreService {
 
   getMostCalledNumbers(number_of_calls: number) {
     return _.take(this.calls, number_of_calls);
+  }
+
+  getAllCalls() {
+    return this.calls;
   }
 
   // PRIVATE METHODS
