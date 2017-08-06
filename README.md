@@ -5,7 +5,10 @@ Here the instruction to get start the project.
 In order to build and run the application, you need to have installed
 * [NodeJs](https://github.com/SimoneSabba/dialer.git)
 
-This project has been built using Angular-cli. For any issues related to this, install it globally ```npm install -g @angular/cli ```
+This project has been built using Angular-cli. For any issues related to this, install it globally 
+
+```npm install -g @angular/cli ```
+
 ### Setup
 
 Install node modules
