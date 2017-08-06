@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UiDialerComponent } from './ui-dialer/ui-dialer.component';
 
+import { NumbersStoreService } from './numbers-store.service';
+import { TimerService } from './services/timer.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +15,7 @@ import { UiDialerComponent } from './ui-dialer/ui-dialer.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [NumbersStoreService, TimerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
