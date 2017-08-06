@@ -1,3 +1,44 @@
+## Getting started
+Here the instruction to get start the project.
+
+### Prerequisites
+In order to build and run the application, you need to have installed
+* [NodeJs](https://github.com/SimoneSabba/dialer.git)
+
+This project has been built using Angular-cli. For any issues related to this, install it globally ```npm install -g @angular/cli ```
+### Setup
+
+Install node modules
+```javascript
+npm install
+```
+Once everything has been installed succesfully, build the project
+```javascript
+npm start
+```
+Open your favourite browser and go to http://localhost:4200 to display the demo.
+
+### Test
+Run unit test
+```javascript
+npm test
+```
+
+### Tech Stack used
+* Angular 2
+* Typescript
+* Bootstrap 4
+* Lodash
+* RxJs / Observable
+
+### Improvement
+I've used a service to store phone number calls. To achieve the same goal in a more efficient way could be used Redux to manage the state of the application.
+Using Redux approach, these actions could be dispatched
+``` START_CALL ``` and ``` END_CALL ```.
+In the reducer, for the ``` START_CALL ``` action it could take the phone number and the duration and update the app state in case the phone number is not present already in the state, update it otherwise.
+In case of the ``` END_CALL ``` action instead, return all the calls
+
+
 ### Frontend CodeTest
 
 Please create a basic dialer UI **component**, implementing the interface as designed in the provided mockup.
@@ -25,16 +66,3 @@ At the end of any call the component should invoke a callback reporting followin
 
 Every call started with the dial button has to be counted against the corresponding phone number.
 
-You can use any tool, library or framework that can help you write production ready code.
-
-For any unclear instruction or missing detail make a reasonable assumption and document accordingly.
-
-To quickly share your solution you can use one of the available online code playground:
-
-* [GitHub](https://github.com)
-* [jsFiddle](https://jsfiddle.net)
-* [CodePen](https://codepen.io)
-
-Or provide as compressed package.
-
-Please document any build instructions needed to run the solution in a README file.
