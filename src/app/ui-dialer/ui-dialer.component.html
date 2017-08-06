@@ -19,8 +19,22 @@
 
 	<!-- BOTTOM SECTION -->
 	<div class="[ dialer__bottom ]" [class.dialer__bottom--full-height]=is_on_call>
-		<button [hidden]=is_on_call (click)="onDialClick()" class="[ dialer__bottom__button dialer__bottom__button--green ]">Dial</button>
-		<button [hidden]=!is_on_call (click)="onHangUpClick()" class="[ dialer__bottom__button dialer__bottom__button--red ]">Hangup</button>
+		
+		<!-- DIAL BUTTON -->
+		<button 
+			#dial_button 
+			[hidden]=is_on_call 
+			class="[ dialer__bottom__button dialer__bottom__button--green ]">
+			Dial
+		</button>
+
+		<!-- HANGUP BUTTON  -->
+		<button 
+			#hangup_button 
+			[hidden]=!is_on_call 
+			class="[ dialer__bottom__button dialer__bottom__button--red ]">
+			Hangup
+		</button>
 	</div>
 	<!-- /BOTTOM SECTION -->
 </div>
